@@ -8,3 +8,4 @@
 6. Used Primary,Foreign key in Models class
 7. Used DTO class for rendering data on client side
 8. Focused on SignalR for data sync across multiple users/browsers instead of unit tests (but no luck so far)
+9. Added a sample MS unit test using MOQ library in test project
