@@ -14,7 +14,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let parkingLot of parkingLots ">
+    <tr *ngFor="let parkingLot of parkingLotsObservable | async">
       <td>{{ parkingLot.parkingLotId }}</td>
       <td>{{ parkingLot.parkingLotAddress }}</td>
       <td>{{ parkingLot.availableSpaces }}</td>
