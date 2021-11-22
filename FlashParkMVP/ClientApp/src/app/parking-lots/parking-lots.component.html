@@ -1,0 +1,26 @@
+<h1 id="tableLabel">Parking Lots</h1>
+
+<p *ngIf="!parkingLots"><em>Loading...</em></p>
+
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="parkingLots">
+  <thead>
+    <tr>
+      <th>Parking Lot Id</th>
+      <th>Parking Lot Address</th>
+      <th>Available Spaces</th>
+      <th>Total Spaces</th>
+      <th>Add Vehicle</th>
+      <th>Remove Vehicle</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let parkingLot of parkingLots ">
+      <td>{{ parkingLot.parkingLotId }}</td>
+      <td>{{ parkingLot.parkingLotAddress }}</td>
+      <td>{{ parkingLot.availableSpaces }}</td>
+      <td>{{ parkingLot.totalSpaces }}</td>
+      <td><button class="btn btn-primary" (click)="addVehicle(parkingLot)">Add Vehicle</button></td>
+      <td><button class="btn btn-primary" (click)="removeVehicle(parkingLot)">Remove Vehicle</button></td>
+    </tr>
+  </tbody>
+</table>
